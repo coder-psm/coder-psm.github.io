@@ -1,0 +1,324 @@
+:root {
+  --primary-color: #b65f75;
+  --secondary-color: #333;
+  --font-family: Bahnschrift Semibold, sans-serif;
+  --subheadings-font-size: 25px; /* Adjust the font size here */
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-family);
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  background-color: transparent;
+  color: var(--secondary-color);
+  padding: 15px;
+  text-align: center;
+}
+
+header h1 img {
+  max-width: 150px; 
+  height: auto;
+}
+
+.subheadings {
+  margin-top: 50px;
+  font-size: var(--subheadings-font-size);
+  color: var(--subheadings-color);
+  font-family: Bahnschrift Semibold, sans-serif;
+  text-align: center;
+}
+
+.logo-container {
+  text-align: center; /* Center align the logos */
+}
+
+.logo-container img {
+  max-width: 50px; /* Adjust the maximum width of the logos */
+  margin: 0 10px; /* Add some margin between the logos */
+}
+
+.subheadings ul {
+  display: inline-block;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.subheadings li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+.subheadings a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+h1.logo {
+  margin: 0;
+  font-size: 34px;
+  font-weight:bold;
+  font-family: var(--font-family);
+  border-right: 23px solid black;
+  border-bottom: 8px solid black;
+  padding: 10px 3px;
+  display: inline-block;
+}
+/* This will remove the underline from the entire link */
+h1 a:hover {
+  text-decoration: none;
+}
+
+/* This will only remove the underline from the image within the link */
+h1 a img {
+  display: inline-block; /* Makes the image behave like text */
+  vertical-align: middle; /* Aligns it with the text */
+  text-decoration: none; /* Removes any underline */
+}
+
+/* If you still want the text to be underlined on hover but not the logo */
+h1 a:hover {
+  text-decoration: none;
+}
+
+h1 a:hover::before {
+  content: "Pouyasm";
+  text-decoration: underline;
+  visibility: hidden;
+  position: absolute;
+}
+
+
+nav {
+  margin-top: 10px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
+li {
+  margin: 0 10px;
+}
+
+a {
+  color: var(--secondary-color);
+  text-decoration: none;
+  font-family: var(--font-family);
+}
+
+a:hover {
+  text-decoration: underline;
+  color: var(--primary-color);
+}
+
+h1 a:hover::before {
+  content: "POUYA SM";
+  text-decoration: underline;
+  visibility: hidden;
+  position: absolute;
+}
+main {
+  text-align: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 20px;
+  justify-content: center;
+  width: 100%;   /* Ensure it takes the full width */
+  margin-bottom: 200px;  /* Adjust this value to create the desired gap */
+ }
+ 
+
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+nav ul {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+nav li {
+  margin: 0 20px;
+  padding: 0;
+}
+
+nav a {
+  display: block;
+  padding: 10px;
+  font-size: 18px;
+  font-weight: lighter;
+  text-transform: lowercase;
+  letter-spacing: 2px;
+  font-family: var(--font-family);
+}
+
+.image-container {
+  max-width: 50%;
+  margin: 200px auto 0 auto;  /* This centers the image container within the grid cell */
+}
+
+.image-container img {
+  width: 110%;  /* This will make the image fill its container */
+  height: auto;
+}
+
+
+ /* CSS Styles */
+ .coming-soon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+  font-size: 40px;
+  color: #b65f75;
+  text-align: center;
+  font-family: Bahnschrift Semibold, sans-serif;
+  font-weight: lighter;
+}
+
+/* CSS for the footer */
+/* Set the HTML and body height to 100% */
+html, body {
+  height: 100%;
+}
+
+/* Create a flex container for the entire page */
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Set the main content to grow and take up remaining space */
+
+footer {
+  
+  margin-top: 40px;
+  padding-top: 20px;
+  color: var(--secondary-color);
+  font-family: var(--font-family);
+  
+  text-align: center;
+  position: relative;
+  font-size: 12px;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-line {
+  position: absolute;
+  left: 50px;
+  right: 50px;
+  top: 0;
+  height: 1px;
+  background-color: #000;
+}
+
+.footer-left {
+  flex-grow: 0;
+  text-align: left;
+  margin-left: 25px;
+}
+
+.footer-right {
+  flex-grow: 0;
+  text-align: right;
+  margin-right: 25px;
+}
+
+.footer-right a {
+  color: var(--secondary-color);
+  text-decoration: none;
+  font-weight: bold;
+}
+/* Media queries for responsive design */
+@media only screen and (max-width: 768px) {
+  /* Styles for screens up to 768px wide */
+  .footer-line {
+    left: 20px; /* Adjust the position of the line */
+    right: 20px; /* Adjust the position of the line */
+  }
+  
+  .footer-container {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .footer-left,
+  .footer-right {
+    margin-top: 0; /* Remove top margin */
+  }
+  
+  .footer-left {
+    flex-grow: 1;
+    text-align: left; /* Align the text to the left */
+  }
+  
+  .footer-right {
+    flex-grow: 0;
+    text-align: center; /* Align the text to the right */
+  }
+  
+}
+.subheadings {
+  text-align: center;
+}
+
+.subheadings ul {
+  display: inline-block;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.subheadings li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+.subheadings a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+
+
+/* Styles for displaying images in a grid */
+main {
+  text-align: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 10px;
+  justify-content: center;
+}
+
+.image-container img {
+  max-width: 150%;
+  
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.image-container:hover img {
+  transform: scale(1.05);
+  box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.2);
+}
